@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SortWasteVictoria_WebApp.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SortWasteVictoria_WebAppContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SortWasteVictoria_WebAppContext") ?? throw new InvalidOperationException("Connection string 'SortWasteVictoria_WebAppContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

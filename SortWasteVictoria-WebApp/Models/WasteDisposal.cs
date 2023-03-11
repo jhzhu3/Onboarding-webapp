@@ -1,4 +1,4 @@
-﻿namespace SortWasteVictoria_WebApp.Models
+﻿/*namespace SortWasteVictoria_WebApp.Models
 {
     public class Garbage
     {
@@ -16,4 +16,4 @@
         public string? BinInfo { get; set; }
 
     }
-}
+}*/
