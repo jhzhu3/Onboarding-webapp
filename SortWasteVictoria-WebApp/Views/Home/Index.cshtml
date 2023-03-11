@@ -3,6 +3,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">WELCOME</h1>
+    <p>Learn about waste disposal practices in Victoria.</a>.</p>
+</div>
+
+<div class="text-center">
+    <form asp-controller="Search" asp-action="Index">
+        <p>
+            Garbage: <input type="text" name="SearchString" />
+            <input type="submit" value="Search" />
+        </p>
+    </form>
 </div>
