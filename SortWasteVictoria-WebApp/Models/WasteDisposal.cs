@@ -15,5 +15,7 @@
         public string? BinColour { get; set; }
         public string? BinInfo { get; set; }
 
+        public List<Garbage> Garbages { get; set;}
+
     }
 }
