@@ -1,0 +1,397 @@
+[
+  {
+    "garbage_id": 1,
+    "bin_id": 2,
+    "garbage_name": "Aerosol cans"
+  },
+  {
+    "garbage_id": 2,
+    "bin_id": 2,
+    "garbage_name": "Aluminium foil"
+  },
+  {
+    "garbage_id": 3,
+    "bin_id": 2,
+    "garbage_name": "Aluminium trays"
+  },
+  {
+    "garbage_id": 4,
+    "bin_id": 5,
+    "garbage_name": "Anti-freeze"
+  },
+  {
+    "garbage_id": 5,
+    "bin_id": 2,
+    "garbage_name": "Aluminium cans"
+  },
+  {
+    "garbage_id": 6,
+    "bin_id": 1,
+    "garbage_name": "Balloons"
+  },
+  {
+    "garbage_id": 7,
+    "bin_id": 1,
+    "garbage_name": "band aids"
+  },
+  {
+    "garbage_id": 8,
+    "bin_id": 5,
+    "garbage_name": "Batteries "
+  },
+  {
+    "garbage_id": 9,
+    "bin_id": 2,
+    "garbage_name": "Biscuit trays "
+  },
+  {
+    "garbage_id": 10,
+    "bin_id": 2,
+    "garbage_name": "Bottles "
+  },
+  {
+    "garbage_id": 11,
+    "bin_id": 1,
+    "garbage_name": "Bubble wrap "
+  },
+  {
+    "garbage_id": 12,
+    "bin_id": 1,
+    "garbage_name": "Bread bags "
+  },
+  {
+    "garbage_id": 13,
+    "bin_id": 5,
+    "garbage_name": "Cameras "
+  },
+  {
+    "garbage_id": 14,
+    "bin_id": 3,
+    "garbage_name": "glass cans"
+  },
+  {
+    "garbage_id": 15,
+    "bin_id": 2,
+    "garbage_name": "Cardboard  "
+  },
+  {
+    "garbage_id": 16,
+    "bin_id": 1,
+    "garbage_name": "CDs "
+  },
+  {
+    "garbage_id": 17,
+    "bin_id": 1,
+    "garbage_name": "Cassette tapes "
+  },
+  {
+    "garbage_id": 18,
+    "bin_id": 1,
+    "garbage_name": "Ceramics "
+  },
+  {
+    "garbage_id": 19,
+    "bin_id": 1,
+    "garbage_name": "Cigarette butts "
+  },
+  {
+    "garbage_id": 20,
+    "bin_id": 5,
+    "garbage_name": "Chemicals "
+  },
+  {
+    "garbage_id": 21,
+    "bin_id": 1,
+    "garbage_name": "Cling wrap  "
+  },
+  {
+    "garbage_id": 22,
+    "bin_id": 5,
+    "garbage_name": "Computers and accessories "
+  },
+  {
+    "garbage_id": 23,
+    "bin_id": 2,
+    "garbage_name": "plastic cans "
+  },
+  {
+    "garbage_id": 24,
+    "bin_id": 5,
+    "garbage_name": "electrical or electronic waste"
+  },
+  {
+    "garbage_id": 25,
+    "bin_id": 2,
+    "garbage_name": "Formula tins  "
+  },
+  {
+    "garbage_id": 26,
+    "bin_id": 2,
+    "garbage_name": "Juice boxes and containers  "
+  },
+  {
+    "garbage_id": 27,
+    "bin_id": 5,
+    "garbage_name": "Iron  "
+  },
+  {
+    "garbage_id": 28,
+    "bin_id": 5,
+    "garbage_name": "Motor oil  "
+  },
+  {
+    "garbage_id": 29,
+    "bin_id": 2,
+    "garbage_name": "Magazines  "
+  },
+  {
+    "garbage_id": 30,
+    "bin_id": 1,
+    "garbage_name": "Nappies  "
+  },
+  {
+    "garbage_id": 31,
+    "bin_id": 2,
+    "garbage_name": "Newspapers\u200b  "
+  },
+  {
+    "garbage_id": 32,
+    "bin_id": 3,
+    "garbage_name": "glass bottles "
+  },
+  {
+    "garbage_id": 33,
+    "bin_id": 3,
+    "garbage_name": "glass jars  "
+  },
+  {
+    "garbage_id": 34,
+    "bin_id": 2,
+    "garbage_name": "Metal lids  "
+  },
+  {
+    "garbage_id": 35,
+    "bin_id": 5,
+    "garbage_name": "Syringes  "
+  },
+  {
+    "garbage_id": 36,
+    "bin_id": 5,
+    "garbage_name": "building materials  "
+  },
+  {
+    "garbage_id": 37,
+    "bin_id": 4,
+    "garbage_name": "Fruit and vegetable scraps "
+  },
+  {
+    "garbage_id": 38,
+    "bin_id": 4,
+    "garbage_name": "Bread, cereal, pasta and rice "
+  },
+  {
+    "garbage_id": 40,
+    "bin_id": 4,
+    "garbage_name": "Dairy leftovers  "
+  },
+  {
+    "garbage_id": 41,
+    "bin_id": 4,
+    "garbage_name": "tea leaves and coffee grounds  "
+  },
+  {
+    "garbage_id": 42,
+    "bin_id": 4,
+    "garbage_name": "Serviettes and paper towel   "
+  },
+  {
+    "garbage_id": 43,
+    "bin_id": 4,
+    "garbage_name": "Tissues  "
+  },
+  {
+    "garbage_id": 44,
+    "bin_id": 4,
+    "garbage_name": "Meat scraps, seafood and bones  "
+  },
+  {
+    "garbage_id": 45,
+    "bin_id": 4,
+    "garbage_name": "Crustacean shells  "
+  },
+  {
+    "garbage_id": 46,
+    "bin_id": 4,
+    "garbage_name": "Citrus, garlic, onion, chilli   "
+  },
+  {
+    "garbage_id": 47,
+    "bin_id": 4,
+    "garbage_name": "Leftovers  "
+  },
+  {
+    "garbage_id": 48,
+    "bin_id": 4,
+    "garbage_name": "Human and animal hair  "
+  },
+  {
+    "garbage_id": 49,
+    "bin_id": 4,
+    "garbage_name": "Uncoated toothpicks, skewers and chopsticks"
+  },
+  {
+    "garbage_id": 50,
+    "bin_id": 4,
+    "garbage_name": "Grass clippings, leaves and weeds  "
+  },
+  {
+    "garbage_id": 51,
+    "bin_id": 5,
+    "garbage_name": "Watches"
+  },
+  {
+    "garbage_id": 52,
+    "bin_id": 2,
+    "garbage_name": "Waxed cardboard"
+  },
+  {
+    "garbage_id": 53,
+    "bin_id": 5,
+    "garbage_name": "Vacuum cleaners "
+  },
+  {
+    "garbage_id": 54,
+    "bin_id": 1,
+    "garbage_name": "Vacuum cleaner dust"
+  },
+  {
+    "garbage_id": 55,
+    "bin_id": 1,
+    "garbage_name": "VHS / Cassette tapes"
+  },
+  {
+    "garbage_id": 56,
+    "bin_id": 1,
+    "garbage_name": "Tea bags"
+  },
+  {
+    "garbage_id": 57,
+    "bin_id": 1,
+    "garbage_name": "Tetra Paks"
+  },
+  {
+    "garbage_id": 58,
+    "bin_id": 1,
+    "garbage_name": "Tissues"
+  },
+  {
+    "garbage_id": 59,
+    "bin_id": 5,
+    "garbage_name": "Toaster"
+  },
+  {
+    "garbage_id": 60,
+    "bin_id": 1,
+    "garbage_name": "Toothbrushes "
+  },
+  {
+    "garbage_id": 61,
+    "bin_id": 1,
+    "garbage_name": "Smoke detectors (household)"
+  },
+  {
+    "garbage_id": 62,
+    "bin_id": 1,
+    "garbage_name": "Soft plastics"
+  },
+  {
+    "garbage_id": 63,
+    "bin_id": 2,
+    "garbage_name": "Steel cans"
+  },
+  {
+    "garbage_id": 64,
+    "bin_id": 5,
+    "garbage_name": "Radios"
+  },
+  {
+    "garbage_id": 65,
+    "bin_id": 5,
+    "garbage_name": "Rat poison"
+  },
+  {
+    "garbage_id": 66,
+    "bin_id": 5,
+    "garbage_name": "Remote control"
+  },
+  {
+    "garbage_id": 67,
+    "bin_id": 1,
+    "garbage_name": "Reusable shopping bags "
+  },
+  {
+    "garbage_id": 68,
+    "bin_id": 2,
+    "garbage_name": "Paper and cardboard"
+  },
+  {
+    "garbage_id": 69,
+    "bin_id": 2,
+    "garbage_name": "Plant pots "
+  },
+  {
+    "garbage_id": 70,
+    "bin_id": 1,
+    "garbage_name": "Pet food bags "
+  },
+  {
+    "garbage_id": 71,
+    "bin_id": 1,
+    "garbage_name": "Plastic bags "
+  },
+  {
+    "garbage_id": 72,
+    "bin_id": 2,
+    "garbage_name": "Plastic containers and bottles "
+  },
+  {
+    "garbage_id": 73,
+    "bin_id": 1,
+    "garbage_name": "Plastic strapping, packing tape "
+  },
+  {
+    "garbage_id": 74,
+    "bin_id": 1,
+    "garbage_name": "Polystyrene "
+  },
+  {
+    "garbage_id": 75,
+    "bin_id": 1,
+    "garbage_name": "Potting mix bags "
+  },
+  {
+    "garbage_id": 76,
+    "bin_id": 5,
+    "garbage_name": "Power tools "
+  },
+  {
+    "garbage_id": 77,
+    "bin_id": 4,
+    "garbage_name": "Prunings "
+  },
+  {
+    "garbage_id": 78,
+    "bin_id": 1,
+    "garbage_name": "Pyrex "
+  },
+  {
+    "garbage_id": 79,
+    "bin_id": 4,
+    "garbage_name": "Flowers, garden cuttings, garden prunings  "
+  },
+  {
+    "garbage_id": 80,
+    "bin_id": 4,
+    "garbage_name": "Small branches "
+  }
+]

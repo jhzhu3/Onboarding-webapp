@@ -17,5 +17,13 @@ namespace SortWasteVictoria_WebApp.Data
         public DbSet<SortWasteVictoria_WebApp.Models.Bin> Bin { get; set; } = default!;
 
         public DbSet<SortWasteVictoria_WebApp.Models.Garbage> Garbage { get; set; } = default!;
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Garbage>()
+            .HasOne(g => g.Bin)
+            .WithMany(b => b.garbages)
+            .HasForeignKey(g => g.BinId);
+    }
     }
 }

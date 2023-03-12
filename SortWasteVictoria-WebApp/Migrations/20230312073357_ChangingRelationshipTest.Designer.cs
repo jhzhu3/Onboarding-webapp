@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SortWasteVictoria_WebApp.Data;
 
@@ -10,9 +11,11 @@ using SortWasteVictoria_WebApp.Data;
 namespace SortWasteVictoria_WebApp.Migrations
 {
     [DbContext(typeof(SortWasteVictoria_WebAppContext))]
-    partial class SortWasteVictoria_WebAppContextModelSnapshot : ModelSnapshot
+    [Migration("20230312073357_ChangingRelationshipTest")]
+    partial class ChangingRelationshipTest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

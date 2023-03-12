@@ -6,5 +6,7 @@
         public string? BinColour { get; set; }
         public string? BinInfo { get; set; }
 
+        public ICollection<Garbage> garbages { get; set; }
+
     }
 }
