@@ -49,6 +49,28 @@ namespace SortWasteVictoria_WebApp.Controllers
             return View(await garbages.ToListAsync());*/
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Search()
+        {
+            string prefix = HttpContext.Request.Query["term"].ToString();
+            var garbages = _context.Garbage.Where(g => g.GarbageName.Contains(prefix))
+                     .Select(g => g.GarbageName).ToList();
+            return Ok(garbages);
+            /* try
+             {
+                 string prefix = HttpContext.Request.Query["prefix"].ToString();
+                 var garbages = _context.Garbage.Where(g => g.GarbageName.Contains(prefix))
+                     .Select(g => g.GarbageName).ToList();
+                 return Ok(garbages);
+             }
+             catch
+             {
+                 return BadRequest();
+             }*/
+        }
+
+
+
         // GET: Garbages/Details/5
         public async Task<IActionResult> Details(int? id)
         {
