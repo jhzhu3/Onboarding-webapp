@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,28 @@ namespace SortWasteVictoria_WebApp.Controllers
         {
             var sortWasteVictoria_WebAppContext = _context.Garbage.Include(g => g.Bin);
             return View(await sortWasteVictoria_WebAppContext.ToListAsync());
+        }
+
+        //GET: Garbages/Info
+        public async Task<IActionResult> Info(string SearchString)
+        {
+            var sortWasteVictoria_WebAppContext = _context.Garbage.Include(g => g.Bin);
+
+            ViewData["CurrentFilter"] = SearchString;
+            var garbages = from g in _context.Garbage select g;
+
+            List<Garbage> testList = sortWasteVictoria_WebAppContext.ToList();
+            List<Garbage> found = testList.Where(gb => gb.GarbageName.Contains(SearchString)).ToList();
+
+            return View(found);
+            
+
+/*            if (!String.IsNullOrEmpty(SearchString))
+            {
+                garbages = garbages.Where(g => g.GarbageName.Contains(SearchString));
+            }
+            
+            return View(await garbages.ToListAsync());*/
         }
 
         // GET: Garbages/Details/5

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<SortWasteVictoria_WebApp.Models.Garbage>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -8,10 +10,15 @@
 </div>
 
 <div class="text-center">
-    <form asp-controller="Search" asp-action="Index">
+    <form asp-controller="Garbages" asp-action="Info">
         <p>
-            Garbage: <input type="text" name="SearchString" />
-            <input type="submit" value="Search" />
+            Garbage: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]"/>
+            <input type="submit" value="Search" class="btn btn-primary"/>
         </p>
     </form>
 </div>
+
+@*<div>
+    <h2>You have chosen : @Html.DisplayFor(model => model)</h2>
+    <p>Bin Number: @Html.DisplayFor(modelItem => item.Bin.BinId)</p>
+</div>*@
