@@ -9,7 +9,7 @@
 </div>
 
 
-<table class="table">
+@*<table class="table">
     <thead>
         <tr>
             <th>
@@ -46,4 +46,50 @@
             </tr>
         }
     </tbody>
-</table>
+</table>*@
+
+<div class="text-center">
+    <p>Your Garbage: @{
+            foreach (var item in Model)
+            {
+                @Html.DisplayFor(modelItem => item.GarbageName)
+            }
+        }</p>
+
+    <p>
+        Where to put your item: @{
+            foreach (var item in Model)
+            {
+                @Html.DisplayFor(modelItem => item.Bin.BinColour)
+            }
+        }
+    </p>
+    <p>
+        @{
+            foreach (var item in Model)
+            {
+                var colour = item.Bin.BinColour;
+                switch (colour)
+                {
+                    case "Red":
+                        <img src="https://drive.google.com/uc?export=view&id=1-yXSn7TtqPzBW342tf5TU4Swlfk1MnvS" alt="Red Bins" width="400" height="630" />
+                        break;
+
+                    case "Yellow":
+                        <img src="https://drive.google.com/uc?export=view&id=1-rQg-ve_U_9Ib0IGIRURitxTfc4m7EEB" alt="Yellow Bins" width="400" height="630" />
+                        break;
+
+                    case "Green":
+                        <img src="https://drive.google.com/uc?export=view&id=1043VfiPwJBzUfhEDtYnjvV5snEdPjoW3" alt="Green Bins" width="400" height="630" />
+                        break;
+
+                    case "Purple":
+                        <img src="https://drive.google.com/uc?export=view&id=100GYO3GWmXBjgCgjOZSAPaflpRunpDjB" alt="Purple Bins" width="400" height="630" />
+                        break;
+                }
+            }
+
+        }
+    </p>
+    <p><a href="javascript:history.go(-1)" class="btn btn-primary">Back</a></p>
+</div>

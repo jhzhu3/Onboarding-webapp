@@ -7,17 +7,34 @@
 
 <div class="text-center">
     <h1 class="display-4">WELCOME</h1>
-    <p>Learn about waste disposal practices in Victoria.</a>.</p>
+    <p>Learn about waste disposal practices in Victoria.</p>
+    <p>!!!See which items go into which bin!!!</p>
 </div>
-
+<br />
+<div class="content">
+    <p>The correct disposal of waste is crucial for the sustainability of our planet. 
+        By using color-coded bins for different types of waste, 
+        such as green for organic waste, yellow for recyclables etc,
+        we can help ensure that each material is processed in the most environmentally friendly way possible. 
+        Remember, every small action counts towards a cleaner and greener future!</p>
+</div>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+    }
+</style>
+<br />
 <div class="text-center">
     <form asp-controller="Garbages" asp-action="Info">
+        <p>Please enter a waste item below:</p>
         <p>
-            Garbage: <input type="text" id="garbageName" name="SearchString" value="@ViewData["CurrentFilter"]"/>
+            <input type="text" id="garbageName" name="SearchString" value="@ViewData["CurrentFilter"]"/>
             <input type="submit" value="Search" class="btn btn-primary"/>
         </p>
     </form>
 </div>
+
 
 
 @section Scripts{
