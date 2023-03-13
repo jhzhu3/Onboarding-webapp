@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/sortwastevictoria-webappdbserver/databases/SortWasteVictoria-WebApp_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:SortWasteVictoria_WebAppContext",
+      "dynamicId": null
+    }
+  }
+}

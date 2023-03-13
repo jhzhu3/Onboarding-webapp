@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SortWasteVictoria_WebApp.Models.Garbage>
+
+@{
+    ViewData["Title"] = "Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center">
+    <h1>WHAT YOU CAN DO</h1>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GarbageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bin)
+            </th>
+            <th>
+                Bin Colour
+            </th>
+            <th>
+                Bin Info
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GarbageName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bin.BinId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bin.BinColour)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bin.BinInfo)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

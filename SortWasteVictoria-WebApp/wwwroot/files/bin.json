@@ -1,0 +1,27 @@
+[
+  {
+    "BinId": 1,
+    "BinColour": "Red",
+    "BinInfo": "Unrecyclable househould wate."
+  },
+  {
+    "BinId": 2,
+    "BinColour": "Yellow",
+    "BinInfo": "Plastic + mental containers, paper & bardboard."
+  },
+  {
+    "BinId": 3,
+    "BinColour": "Purple",
+    "BinInfo": "Glass containers."
+  },
+  {
+    "BinId": 4,
+    "BinColour": "Green",
+    "BinInfo": "Food scraps & garden organics."
+  },
+  {
+    "BinId": 5,
+    "BinColour": "Not in any bins",
+    "BinInfo": "E-waste and chemical waste"
+  }
+]

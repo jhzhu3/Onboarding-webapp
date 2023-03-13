@@ -1,6 +1,9 @@
-﻿@{
+﻿@model IEnumerable<SortWasteVictoria_WebApp.Models.Garbage>
+
+@{
     ViewData["Title"] = "Home Page";
 }
+
 
 <div class="text-center">
     <h1 class="display-4">WELCOME</h1>
@@ -8,10 +11,29 @@
 </div>
 
 <div class="text-center">
-    <form asp-controller="Search" asp-action="Index">
+    <form asp-controller="Garbages" asp-action="Info">
         <p>
-            Garbage: <input type="text" name="SearchString" />
-            <input type="submit" value="Search" />
+            Garbage: <input type="text" id="garbageName" name="SearchString" value="@ViewData["CurrentFilter"]"/>
+            <input type="submit" value="Search" class="btn btn-primary"/>
         </p>
     </form>
 </div>
+
+
+@section Scripts{
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {            
+            $("#garbageName").autocomplete({
+                source: '/Garbages/Search'                  
+            });
+        });
+    </script>
+}
+
+@*<div>
+    <h2>You have chosen : @Html.DisplayFor(model => model)</h2>
+    <p>Bin Number: @Html.DisplayFor(modelItem => item.Bin.BinId)</p>
+</div>*@

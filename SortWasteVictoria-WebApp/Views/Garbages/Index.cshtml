@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SortWasteVictoria_WebApp.Models.Garbage>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GarbageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GarbageName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bin.BinId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.GarbageId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.GarbageId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.GarbageId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
