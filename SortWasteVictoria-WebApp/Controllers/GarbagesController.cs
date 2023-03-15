@@ -33,12 +33,29 @@ namespace SortWasteVictoria_WebApp.Controllers
             var sortWasteVictoria_WebAppContext = _context.Garbage.Include(g => g.Bin);
 
             ViewData["CurrentFilter"] = SearchString;
-            var garbages = from g in _context.Garbage select g;
+            //var garbages = from g in _context.Garbage select g;
 
-            List<Garbage> testList = sortWasteVictoria_WebAppContext.ToList();
-            List<Garbage> found = testList.Where(gb => gb.GarbageName.Contains(SearchString)).ToList();
+            List<Garbage> garbageList = sortWasteVictoria_WebAppContext.ToList();
 
-            return View(found);
+            Garbage test = new Garbage();
+            Bin testBin = new Bin();
+            testBin.BinColour = "test";
+            test.GarbageName = SearchString;
+            test.Bin = testBin;
+            var testList = new List<Garbage>();
+            testList.Add(test);
+
+            if (!garbageList.Contains(test))
+            {              
+                List < Garbage > found = garbageList.Where(gb => gb.GarbageName.Contains(SearchString)).ToList();
+
+                return View(found); 
+            }
+            else
+            { 
+                return View(testList); 
+            }
+
             
 
 /*            if (!String.IsNullOrEmpty(SearchString))
