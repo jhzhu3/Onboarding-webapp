@@ -4,7 +4,8 @@ html {
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 20px;
+    font-family: monospace;
   }
 }
 
@@ -19,4 +20,12 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+html {
+    background-color: antiquewhite;
+}
+
+body {
+    background-color: antiquewhite;
 }

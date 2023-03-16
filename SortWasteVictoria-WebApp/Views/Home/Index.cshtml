@@ -4,24 +4,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-
+<br />
 <div class="text-center">
-    <h1 class="display-4">WELCOME</h1>
-    <p>Learn about waste disposal practices in Victoria.</p>
-    <p>!!!See which items go into which bin!!!</p>
+    <h1 class="display-4" style="color: #388087; font-size:70px"><b>Welcome to Sort Waste Victoria</b></h1>
+    <p style="font-size:30px;">We will help you sort your waste!</p>
+    
 </div>
 
 <br/>
 
 <div class="text-center">
     <form asp-controller="Garbages" asp-action="Info">
-        <p>Please enter a waste item below:</p>
+        @*<p>Please enter a waste item below:</p>*@
+        <p>Search for an item below and see which bin to use!</p>
         <p>
             <input type="text" id="garbageName" name="SearchString" value="@ViewData["CurrentFilter"]"/>
-            <input type="submit" value="Search" class="btn btn-primary"/>
+            <input type="submit" value="Search" class="button"/>
         </p>
     </form>
 </div>
+<style>
+    .button{
+        background-color:#C2EDCE;
+        padding:10px 16px;
+        border-radius: 25px;
+    }
+</style>
 
 <br />
 
@@ -36,7 +44,7 @@
 </div>
 <style>
     .content {
-        max-width: 500px;
+        max-width: 750px;
         margin: auto;
     }
 </style>
@@ -53,6 +61,7 @@
         });
     </script>
 }
+
 
 @*<div>
     <h2>You have chosen : @Html.DisplayFor(model => model)</h2>
