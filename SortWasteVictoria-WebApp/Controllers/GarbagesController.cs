@@ -28,7 +28,7 @@ namespace SortWasteVictoria_WebApp.Controllers
         }
 
         //GET: Garbages/Info
-        public async Task<IActionResult> Info(string SearchString)
+/*        public async Task<IActionResult> Info(string SearchString)
         {
             var sortWasteVictoria_WebAppContext = _context.Garbage.Include(g => g.Bin);
 
@@ -55,15 +55,24 @@ namespace SortWasteVictoria_WebApp.Controllers
             { 
                 return View(testList); 
             }
+        }*/
 
-            
+        public async Task<IActionResult> Info(string SearchString)
+        {
+            var sortWasteVictoria_WebAppContext = _context.Garbage.Include(g => g.Bin);
 
-/*            if (!String.IsNullOrEmpty(SearchString))
+            ViewData["CurrentFilter"] = SearchString;
+            List<Garbage> garbageList = sortWasteVictoria_WebAppContext.ToList();
+            if (garbageList.Any(g => g.GarbageName.Contains(SearchString)))
             {
-                garbages = garbages.Where(g => g.GarbageName.Contains(SearchString));
+                List<Garbage> found = garbageList.Where(gb => gb.GarbageName.Contains(SearchString)).ToList();
+                return View(found);
             }
-            
-            return View(await garbages.ToListAsync());*/
+            else
+            {
+                List<Garbage> notFound = new List<Garbage>();
+                return View(notFound);
+            }
         }
 
         [HttpGet]

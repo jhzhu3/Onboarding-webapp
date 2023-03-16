@@ -4,75 +4,185 @@
     ViewData["Title"] = "Info";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@{
+    var garbageList = Model.ToList();
+    if (!garbageList.Any())
+    {
+        <div class="align-content-center">
+        <h1>OOPS!</h1>
+            <p>
+                <center>Sorry no matches found!</center>
+                <center>The item you are looking for is currently not in our database,</center>
+                <center>but this site will be updated periodically to include more items.</center>
+                <center>Stay tuned for more updates!</center>
+            </p>
+        </div>
+        
+    }
+    else
+    {
+        foreach(var item in Model)
+        {
+            <div class="text-center">
+            <h1>WHAT YOU CAN DO</h1>
+            <p>
+                @{
+                    if (!item.Bin.BinColour.Equals("test"))
+                    {
+                        <a>Your Garbage:</a> @Html.DisplayFor(modelItem => item.GarbageName)
+                    }
+                }
+            </p>
+            <p>
+                @{
+                    if (!item.Bin.BinColour.Equals("test"))
+                    {
+                        <a>Where to put your item:</a>
+                        @Html.DisplayFor(modelItem => item.Bin.BinColour)
+                    }
+                }
+            </p>
+            <p>
+                @{
+                    if (!item.Bin.BinColour.Equals("test"))
+                    {
+                        var colour = item.Bin.BinColour;
+                        switch (colour)
+                        {
+                            case "Red":
+                                <img src="https://drive.google.com/uc?export=view&id=1-yXSn7TtqPzBW342tf5TU4Swlfk1MnvS" alt="Red Bins" width="400" height="630" />
+                                break;
+
+                            case "Yellow":
+                                <img src="https://drive.google.com/uc?export=view&id=1-rQg-ve_U_9Ib0IGIRURitxTfc4m7EEB" alt="Yellow Bins" width="400" height="630" />
+                                break;
+
+                            case "Green":
+                                <img src="https://drive.google.com/uc?export=view&id=1043VfiPwJBzUfhEDtYnjvV5snEdPjoW3" alt="Green Bins" width="400" height="630" />
+                                break;
+
+                            case "Purple":
+                                <img src="https://drive.google.com/uc?export=view&id=100GYO3GWmXBjgCgjOZSAPaflpRunpDjB" alt="Purple Bins" width="400" height="630" />
+                                break;
+                        }
+
+                    }
+                }
+            </p>
+        </div>
+                }
+        
+    }
+}
 <div class="text-center">
+    <p class="align-content-center"><a href="javascript:history.go(-1)" class="btn btn-primary">Back</a></p>
+</div>
+
+
+@*<div>
+    <div>
+        @{
+            foreach (var test in Model)
+            {if (test.Bin.BinColour.Equals("test"))
+            {
+                @Html.DisplayFor(modelItem => test.Bin.BinColour)
+                <div>TESTING</div>
+                <p>
+                    SORRY no matches found! The item you are looking for is currently not in our database,
+                    but this site will be updated periodically to include more items. Stay tuned for more updates!
+                </p>
+            } }
+            
+        }
+    </div>
+    @{
+        foreach (var item in Model)
+        {
+            if (item.Bin.BinColour.Equals("test"))
+            {
+                @Html.DisplayFor(modelItem => item.Bin.BinColour)
+                <div>TESTING</div>
+                <p>SORRY no matches found! The item you are looking for is currently not in our database,                     but this site will be updated periodically to include more items. Stay tuned for more updates!</p>
+            }
+            else
+            {
+                <div class="text-center">
+                    <h1>WHAT YOU CAN DO</h1>
+                    <p>
+                        @{
+                            if (!item.Bin.BinColour.Equals("test"))
+                            {
+                                <a>Your Garbage:</a> @Html.DisplayFor(modelItem => item.GarbageName)
+                            }
+                        }
+                    </p>
+                    <p>
+                        @{
+                            if (!item.Bin.BinColour.Equals("test"))
+                            {
+                                <a>Where to put your item:</a>
+                                @Html.DisplayFor(modelItem => item.Bin.BinColour)
+                            }
+                        }
+                    </p>
+                    <p>
+                        @{
+                            if (!item.Bin.BinColour.Equals("test"))
+                            {
+                                var colour = item.Bin.BinColour;
+                                switch (colour)
+                                {
+                                    case "Red":
+                                        <img src="https://drive.google.com/uc?export=view&id=1-yXSn7TtqPzBW342tf5TU4Swlfk1MnvS" alt="Red Bins" width="400" height="630" />
+                                        break;
+
+                                    case "Yellow":
+                                        <img src="https://drive.google.com/uc?export=view&id=1-rQg-ve_U_9Ib0IGIRURitxTfc4m7EEB" alt="Yellow Bins" width="400" height="630" />
+                                        break;
+
+                                    case "Green":
+                                        <img src="https://drive.google.com/uc?export=view&id=1043VfiPwJBzUfhEDtYnjvV5snEdPjoW3" alt="Green Bins" width="400" height="630" />
+                                        break;
+
+                                    case "Purple":
+                                        <img src="https://drive.google.com/uc?export=view&id=100GYO3GWmXBjgCgjOZSAPaflpRunpDjB" alt="Purple Bins" width="400" height="630" />
+                                        break;
+                                }
+
+                            }
+                        }
+                    </p>
+                </div>
+                            }
+        }
+    }
+
+</div>*@
+
+@*<div class="text-center">
     <h1>WHAT YOU CAN DO</h1>
 </div>
 
 
-@*<div class="text-center">
-    <p>
-        Your Garbage: @{
-            foreach (var item in Model)
-            {
-                @Html.DisplayFor(modelItem => item.GarbageName)
-            }
-        }
-    </p>
-
-    <p>
-        Where to put your item: @{
-            foreach (var item in Model)
-            {
-                @Html.DisplayFor(modelItem => item.Bin.BinColour)
-            }
-        }
-    </p>
-    <p>
-        @{
-            foreach (var item in Model)
-            {
-                var colour = item.Bin.BinColour;
-                switch (colour)
-                {
-                    case "Red":
-                        <img src="https://drive.google.com/uc?export=view&id=1-yXSn7TtqPzBW342tf5TU4Swlfk1MnvS" alt="Red Bins" width="400" height="630" />
-                        break;
-
-                    case "Yellow":
-                        <img src="https://drive.google.com/uc?export=view&id=1-rQg-ve_U_9Ib0IGIRURitxTfc4m7EEB" alt="Yellow Bins" width="400" height="630" />
-                        break;
-
-                    case "Green":
-                        <img src="https://drive.google.com/uc?export=view&id=1043VfiPwJBzUfhEDtYnjvV5snEdPjoW3" alt="Green Bins" width="400" height="630" />
-                        break;
-
-                    case "Purple":
-                        <img src="https://drive.google.com/uc?export=view&id=100GYO3GWmXBjgCgjOZSAPaflpRunpDjB" alt="Purple Bins" width="400" height="630" />
-                        break;
-                }
-            }
-
-        }
-    </p>
-    <p><a href="javascript:history.go(-1)" class="btn btn-primary">Back</a></p>
-</div>*@
-
 <div class="text-center">
-    <p>Your Garbage: @{
+    <p>@{
             foreach (var item in Model)
             {
                 if (!item.Bin.BinColour.Equals("test"))
                 {
-                    @Html.DisplayFor(modelItem => item.GarbageName)                                }
+                    <a>Your Garbage:</a> @Html.DisplayFor(modelItem => item.GarbageName)
+                }
             }
         }</p>
 
     <p>
-        Where to put your item: @{
+        @{
             foreach (var item in Model)
             {
                 if (!item.Bin.BinColour.Equals("test"))
                 {
+                <a>Where to put your item:</a>
                     @Html.DisplayFor(modelItem => item.Bin.BinColour)
                 }               
             }
@@ -108,5 +218,5 @@
             }
         }
     </p>
-    <p><a href="javascript:history.go(-1)" class="btn btn-primary">Back</a></p>
-</div>
+    
+</div>*@

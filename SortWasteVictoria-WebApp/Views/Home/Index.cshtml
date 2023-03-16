@@ -10,21 +10,9 @@
     <p>Learn about waste disposal practices in Victoria.</p>
     <p>!!!See which items go into which bin!!!</p>
 </div>
-<br />
-<div class="content">
-    <p>The correct disposal of waste is crucial for the sustainability of our planet. 
-        By using color-coded bins for different types of waste, 
-        such as green for organic waste, yellow for recyclables etc,
-        we can help ensure that each material is processed in the most environmentally friendly way possible. 
-        Remember, every small action counts towards a cleaner and greener future!</p>
-</div>
-<style>
-    .content {
-        max-width: 500px;
-        margin: auto;
-    }
-</style>
-<br />
+
+<br/>
+
 <div class="text-center">
     <form asp-controller="Garbages" asp-action="Info">
         <p>Please enter a waste item below:</p>
@@ -35,7 +23,23 @@
     </form>
 </div>
 
+<br />
 
+<div class="content">
+    <p class="text-center">
+        The correct disposal of waste is crucial for the sustainability of our planet.
+        By using color-coded bins for different types of waste,
+        such as green for organic waste, yellow for recyclables etc,
+        we can help ensure that each material is processed in the most environmentally friendly way possible.
+        Remember, every small action counts towards a cleaner and greener future!
+    </p>
+</div>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+    }
+</style>
 
 @section Scripts{
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
