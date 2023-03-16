@@ -4,38 +4,50 @@
     ViewData["Title"] = "Home Page";
 }
 
+<br />
+<div class="text-center">
+    <h1 class="display-4" style="color: #388087; font-size:70px"><b>Welcome to Sort Waste Victoria</b></h1>
+    <p style="font-size:30px;">We will help you sort your waste!</p>
+    
+</div>
+
+<br/>
 
 <div class="text-center">
-    <h1 class="display-4">WELCOME</h1>
-    <p>Learn about waste disposal practices in Victoria.</p>
-    <p>!!!See which items go into which bin!!!</p>
-</div>
-<br />
-<div class="content">
-    <p>The correct disposal of waste is crucial for the sustainability of our planet. 
-        By using color-coded bins for different types of waste, 
-        such as green for organic waste, yellow for recyclables etc,
-        we can help ensure that each material is processed in the most environmentally friendly way possible. 
-        Remember, every small action counts towards a cleaner and greener future!</p>
-</div>
-<style>
-    .content {
-        max-width: 500px;
-        margin: auto;
-    }
-</style>
-<br />
-<div class="text-center">
     <form asp-controller="Garbages" asp-action="Info">
-        <p>Please enter a waste item below:</p>
+        @*<p>Please enter a waste item below:</p>*@
+        <p>Search for an item below and see which bin to use!</p>
         <p>
             <input type="text" id="garbageName" name="SearchString" value="@ViewData["CurrentFilter"]"/>
-            <input type="submit" value="Search" class="btn btn-primary"/>
+            <input type="submit" value="Search" class="button"/>
         </p>
     </form>
 </div>
+<style>
+    .button{
+        background-color:#C2EDCE;
+        padding:10px 16px;
+        border-radius: 25px;
+    }
+</style>
 
+<br />
 
+<div class="content">
+    <p class="text-center">
+        The correct disposal of waste is crucial for the sustainability of our planet.
+        By using color-coded bins for different types of waste,
+        such as green for organic waste, yellow for recyclables etc,
+        we can help ensure that each material is processed in the most environmentally friendly way possible.
+        Remember, every small action counts towards a cleaner and greener future!
+    </p>
+</div>
+<style>
+    .content {
+        max-width: 750px;
+        margin: auto;
+    }
+</style>
 
 @section Scripts{
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -49,6 +61,7 @@
         });
     </script>
 }
+
 
 @*<div>
     <h2>You have chosen : @Html.DisplayFor(model => model)</h2>

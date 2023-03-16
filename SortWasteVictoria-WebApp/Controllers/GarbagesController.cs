@@ -28,25 +28,51 @@ namespace SortWasteVictoria_WebApp.Controllers
         }
 
         //GET: Garbages/Info
+/*        public async Task<IActionResult> Info(string SearchString)
+        {
+            var sortWasteVictoria_WebAppContext = _context.Garbage.Include(g => g.Bin);
+
+            ViewData["CurrentFilter"] = SearchString;
+            //var garbages = from g in _context.Garbage select g;
+
+            List<Garbage> garbageList = sortWasteVictoria_WebAppContext.ToList();
+
+            Garbage test = new Garbage();
+            Bin testBin = new Bin();
+            testBin.BinColour = "test";
+            test.GarbageName = SearchString;
+            test.Bin = testBin;
+            var testList = new List<Garbage>();
+            testList.Add(test);
+
+            if (!garbageList.Contains(test))
+            {              
+                List < Garbage > found = garbageList.Where(gb => gb.GarbageName.Contains(SearchString)).ToList();
+
+                return View(found); 
+            }
+            else
+            { 
+                return View(testList); 
+            }
+        }*/
+
         public async Task<IActionResult> Info(string SearchString)
         {
             var sortWasteVictoria_WebAppContext = _context.Garbage.Include(g => g.Bin);
 
             ViewData["CurrentFilter"] = SearchString;
-            var garbages = from g in _context.Garbage select g;
-
-            List<Garbage> testList = sortWasteVictoria_WebAppContext.ToList();
-            List<Garbage> found = testList.Where(gb => gb.GarbageName.Contains(SearchString)).ToList();
-
-            return View(found);
-            
-
-/*            if (!String.IsNullOrEmpty(SearchString))
+            List<Garbage> garbageList = sortWasteVictoria_WebAppContext.ToList();
+            if (garbageList.Any(g => g.GarbageName.Contains(SearchString)))
             {
-                garbages = garbages.Where(g => g.GarbageName.Contains(SearchString));
+                List<Garbage> found = garbageList.Where(gb => gb.GarbageName.Contains(SearchString)).ToList();
+                return View(found);
             }
-            
-            return View(await garbages.ToListAsync());*/
+            else
+            {
+                List<Garbage> notFound = new List<Garbage>();
+                return View(notFound);
+            }
         }
 
         [HttpGet]
